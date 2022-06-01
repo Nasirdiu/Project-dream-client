@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import icon from '../asstes/Image_Icon/Group 33069.png'
 const Navbar = () => {
+  const navigate=useNavigate()
+const handle=()=>{
+  navigate('/login')
+}
     const menu=(
         <>
         <li>
@@ -25,7 +29,7 @@ const Navbar = () => {
     
   return (
     <div class="navbar bg-neutral  mx-auto">
-      <div class="navbar-start">
+      <div class="navbar-start mx-32">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
             <svg
@@ -57,8 +61,8 @@ const Navbar = () => {
         {menu}
         </ul>
       </div>
-      <div class="navbar-end"> 
-      <button class="btn btn-sm btn-accent text-white">Login</button>
+      <div class="navbar-end mx-32"> 
+      <button onClick={handle}  class="btn btn-sm btn-accent text-white">Login</button>
       </div>
     </div>
   );

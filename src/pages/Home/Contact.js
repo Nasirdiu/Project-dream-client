@@ -15,7 +15,7 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Full Name"
-            class="input input-bordered input-md w-full max-w-xs "
+            class="input input-bordered input-md w-full max-w-xs mr-4 "
           />
           <input
             type="text"
@@ -26,7 +26,7 @@ const Contact = () => {
           <input
             type="email"
             placeholder="Email Address"
-            class="input input-bordered input-md w-full max-w-xs "
+            class="input input-bordered input-md w-full max-w-xs mr-4"
           />
           <input
             type="text"
@@ -35,10 +35,10 @@ const Contact = () => {
           />{" "}
           <br /> <br />
           <textarea
-            class="textarea textarea-bordered w-96"
+            class="textarea textarea-bordered w-96 h-40"
             placeholder="Your Message"
           ></textarea>
-          <div class="flex justify-center mt-10">
+          <div class="flex justify-center mt-10 ">
             <button class="btn btn-accent">Send Message</button>
           </div>
         </form>

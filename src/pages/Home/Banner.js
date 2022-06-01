@@ -3,7 +3,7 @@ import banner from '../../asstes/Image_Icon/Image/pierre-chatel-innocenti-AlSlE8
 const Banner = () => {
   return (
     <div class="hero min-h-screen  bg-neutral" >
-      <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="hero-content flex-col lg:flex-row-reverse  mx-40">
         <img
           src={banner}
           class="max-w-sm rounded-lg shadow-2xl" alt=""
