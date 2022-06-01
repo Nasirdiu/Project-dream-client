@@ -2,7 +2,7 @@ import React from "react";
 import icon from "../asstes/Image_Icon/Icon/Group 33011.png";
 const Footer = () => {
   return (
-    <div className="bg-accent">
+    <div className="bg-accent mt-40">
       <footer class="footer p-10  text-white mt-10">
         <div className="flex">
           <img className="bg-white w-6" src={icon} alt="" />

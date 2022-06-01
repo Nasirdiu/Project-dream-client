@@ -6,7 +6,7 @@ import icon from "../../asstes/Image_Icon/Icon/Group 33011.png";
 const Design = () => {
   return (
     <div className="bg-white mt-40 ">
-      <p className="text-center text-accent">Projects</p>
+      
       <h1 className="text-3xl font-bold text-center ">
         Discover the latest Interior Design
       </h1>

@@ -5,7 +5,7 @@ import office2 from "../../asstes/Image_Icon/Icon/lessee 1.png";
 const Services = () => {
   return (
     <div className=" bg-white mt-40">
-      <p className="text-center text-accent">Service</p>
+      
       <h1 className="text-3xl font-bold text-center">
         We're an agency tailored to all
       </h1>
