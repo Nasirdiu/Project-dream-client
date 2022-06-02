@@ -4,6 +4,9 @@ import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Admin from './pages/Admin/Admin';
+import Book from './pages/Admin/Book';
+import Booking from './pages/Admin/Booking';
+import Review from './pages/Admin/Review';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import SingUp from './pages/Login/SingUp';
@@ -18,7 +21,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/singUp' element={<SingUp></SingUp>}></Route>
-        <Route path='/admin' element={<Admin></Admin>}></Route>
+        <Route path='admin' element={<Admin></Admin>}>
+          <Route index element={<Book></Book>}></Route>
+          <Route path='booking' element={<Booking></Booking>}></Route>
+          <Route path='review' element={<Review></Review>}></Route>
+        </Route>
       </Routes>
       <Footer></Footer>
     </div>
