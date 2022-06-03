@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import google from "../../asstes/Image_Icon/Icon/Group 573.png";
+import {
+  useSendEmailVerification,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [sendEmailVerification, sending, error1] =
+    useSendEmailVerification(auth);
+
   const {
     register,
     formState: { errors },
@@ -15,7 +25,7 @@ const Login = () => {
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Login</h2>
 
-          <form onSubmit={handleSubmit(onSubmit)} >
+          {/* <form onSubmit={handleSubmit(onSubmit)} >
             <div className="form-control w-full max-w-xs">
               <input
                 type="email"
@@ -80,7 +90,7 @@ const Login = () => {
               type="submit"
               value="Login"
             />
-          </form>
+          </form> */}
 
           <p>
             <small>
@@ -93,7 +103,7 @@ const Login = () => {
 
           <div className="divider">OR</div>
           <button
-            // onClick={() => signInWithGoogle()}
+            onClick={() => signInWithGoogle()}
             className="btn btn-accent text-white"
           >
             <img src={google} className="w-6 mr-10 " alt="" />

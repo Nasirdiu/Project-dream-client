@@ -2,10 +2,14 @@ import React from "react";
 import office from "../../asstes/Image_Icon/Icon/apartment 1.png";
 import office1 from "../../asstes/Image_Icon/Icon/affordable 1.png";
 import office2 from "../../asstes/Image_Icon/Icon/lessee 1.png";
+import { useNavigate } from "react-router-dom";
 const Services = () => {
+  const nagtive=useNavigate()
+const handle=()=>{
+  nagtive('/admin')
+}
   return (
     <div className=" bg-white mt-40">
-      
       <h1 className="text-3xl font-bold text-center">
         We're an agency tailored to all
       </h1>
@@ -20,7 +24,13 @@ const Services = () => {
           <div class="card-body">
             <h2 class="font-bold text-center">Office Interior Design</h2>
             <p className="text-accent text-center font-bold">$299</p>
-            <p className="text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <p className="text-center">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <div class="flex justify-center mt-2">
+              <button onClick={handle} class="btn btn-accent">Order Now</button>
+            </div>
           </div>
         </div>
         <div class="card w-96  shadow-xl">
@@ -28,9 +38,15 @@ const Services = () => {
             <img className="w-25 h-24" src={office1} alt="" />
           </figure>
           <div class="card-body">
-          <h2 class="font-bold text-center">Showroom Design</h2>
+            <h2 class="font-bold text-center">Showroom Design</h2>
             <p className="text-accent text-center font-bold">$399</p>
-            <p className="text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <p className="text-center">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <div class="flex justify-center mt-2">
+              <button onClick={handle} class="btn btn-accent">Order Now</button>
+            </div>
           </div>
         </div>
         <div class="card w-96  shadow-xl">
@@ -38,15 +54,21 @@ const Services = () => {
             <img className="w-25 h-24 " src={office2} alt="" />
           </figure>
           <div class="card-body">
-          <h2 class="font-bold text-center">Residential/ Home</h2>
+            <h2 class="font-bold text-center">Residential/ Home</h2>
             <p className="text-accent text-center font-bold">$499</p>
-            <p className="text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <p className="text-center">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <div class="flex justify-center mt-2">
+              <button  onClick={handle}class="btn btn-accent">Order Now</button>
+            </div>
           </div>
         </div>
       </div>
       <div class="flex justify-center mt-16">
-      <button class="btn btn-accent">Explore more</button>
-    </div>
+        <button class="btn btn-accent">Explore more</button>
+      </div>
     </div>
   );
 };

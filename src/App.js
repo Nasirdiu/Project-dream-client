@@ -10,7 +10,8 @@ import Review from './pages/Admin/Review';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import SingUp from './pages/Login/SingUp';
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         </Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

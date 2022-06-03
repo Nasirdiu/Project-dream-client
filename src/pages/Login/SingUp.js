@@ -1,8 +1,12 @@
 import React from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import google from "../../asstes/Image_Icon/Icon/Group 573.png";
+import auth from "../../firebase.init";
 const SingUp = () => {
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
   const {
     register,
     formState: { errors },
@@ -159,7 +163,7 @@ const SingUp = () => {
 
           <div className="divider">OR</div>
           <button
-            // onClick={() => signInWithGoogle()}
+             onClick={() => signInWithGoogle()}
             className="btn btn-accent text-white"
           >
             <img src={google} className="w-6 mr-10 " alt="" />
