@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import google from "../../asstes/Image_Icon/Icon/Group 573.png";
 import {
   useSendEmailVerification,
@@ -13,12 +13,21 @@ const Login = () => {
   const [sendEmailVerification, sending, error1] =
     useSendEmailVerification(auth);
 
+const navigate=useNavigate()
+    if (user) {
+      navigate("/home");
+    }
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
   const onSubmit = (event) => {};
+
+
+
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl">

@@ -29,13 +29,29 @@ const Review = () => {
             img: img,
           };
           //send to your database:
-          
+          fetch(`http://localhost:5000/uploadReview`,{
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(product),
+          })
+          .then(res=>res.json())
+          .then(data=>{
+            // console.log(data);
+            if(data.insertedId){
+              toast.success("Product added successfully");
+              reset();
+            }else{
+              toast.error("Failed to add the Product");
+            }
+          })
         }
       });
   };
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center mt-10">Review</h1>
+      <h1 className="text-2xl font-bold text-center mt-10">Please Review</h1>
       <div>
         <form
           action=""

@@ -17,9 +17,9 @@ const Design = () => {
           <figure>
             <img className="w-45 h-96 p-30" src={pic} alt="" />
           </figure>
-          <div class="card-body">
+          <div class="card-body mx-auto">
             <h2 class="card-title font-bold">Villa on Washington Avenue</h2>
-            <div className="flex">
+            <div className="flex mx-auto">
               <img className="w-6" src={icon} alt="" />
               <p>Dhaka, Bangladesh</p>
             </div>
@@ -30,8 +30,8 @@ const Design = () => {
             <img className="w-45 h-96" src={pic1} alt="" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title font-bold">Luxury villa in Rego Park</h2>
-            <div className="flex">
+            <h2 class="card-title font-bold mx-auto">Luxury villa in Rego Park</h2>
+            <div className="flex mx-auto">
               <img className="w-6" src={icon} alt="" />
               <p>Dhaka, Bangladesh</p>
             </div>
@@ -41,9 +41,9 @@ const Design = () => {
           <figure>
             <img className="w-45 h-96 p-30" src={pic2} alt="" />
           </figure>
-          <div class="card-body">
+          <div class="card-body mx-auto">
             <h2 class="card-title font-bold">Gorgeous house</h2>
-            <div className="flex">
+            <div className="flex mx-auto">
               <img className="w-6" src={icon} alt="" />
               <p>Dhaka, Bangladesh</p>
             </div>

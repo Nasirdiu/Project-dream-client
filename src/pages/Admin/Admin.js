@@ -3,7 +3,11 @@ import { Link, Outlet } from "react-router-dom";
 import group from "../../asstes/Image_Icon/Icon/Group.png";
 import group1 from "../../asstes/Image_Icon/Icon/Group 1360.png";
 import group2 from "../../asstes/Image_Icon/Icon/Group 1368.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 const Admin = () => {
+  const [user] = useAuthState(auth);
+  // const [admin] = useAdmin(user);
   return (
     <div class="drawer drawer-mobile mt-10 bg-indigo-50">
       <input id="admin-sidebar" type="checkbox" class="drawer-toggle" />
